@@ -9,9 +9,7 @@
                  [org.slf4j/slf4j-simple "2.0.16"]
                  [com.github.seancorfield/next.jdbc "1.3.955"]
                  [org.postgresql/postgresql "42.7.4"]
-
-                 ]
+                 [org.webjars/swagger-ui "5.18.2"]]
   :main ^:skip-aot api-clojure-poc.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot      :all
-                       :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})
+  :profiles {:uberjar {:aot :all :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})

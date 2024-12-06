@@ -5,14 +5,11 @@
 (defn build-response [ctx object]
   (.status ctx 200)
   (.contentType ctx "application/json")
-  (.result ctx (generate-string object))
-  )
+  (.result ctx (generate-string object)))
 
-(defn all-user-handler [ctx]
-  (build-response ctx (user-service/all)) ()
-  )
+(defn all [ctx]
+  (build-response ctx (user-service/all)) ())
 
 (defn add [ctx]
-  (build-response ctx (user-service/add (parse-string (.body ctx))))
-  )
+  (build-response ctx (user-service/add (parse-string (.body ctx)))))
 

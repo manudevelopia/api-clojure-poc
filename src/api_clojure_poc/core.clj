@@ -2,9 +2,7 @@
   (:gen-class))
 
 (defn say [message]
-  message
-  )
+  message)
 
 (defn -main [& args]
-  (say "Hello, World!")
-  )
+  (say "Hello, World!"))

@@ -13,8 +13,7 @@
 (def ds (jdbc/get-datasource db-spec))
 
 (defn all []
-  (jdbc/execute! ds ["select t_title title from dotoo.tasks"] {:builder-fn rs/as-unqualified-maps})
-  )
+  (jdbc/execute! ds ["select t_title title from dotoo.tasks"] {:builder-fn rs/as-unqualified-maps}))
 
 (defn add [task]
-  (jdbc/execute! ds ["INSERT INTO dotoo.tasks (t_title) VALUES (?)" ( task "title")]))
+  (jdbc/execute! ds ["insert into dotoo.tasks (t_title) values (?)" (task "title")]))
