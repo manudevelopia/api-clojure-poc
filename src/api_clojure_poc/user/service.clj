@@ -4,3 +4,7 @@
 (defn all []
   (repository/all)
   )
+
+(defn add [title]
+  (repository/add-user title)
+  )

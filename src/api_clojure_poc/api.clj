@@ -1,5 +1,5 @@
 (ns api-clojure-poc.api
-  (:require [api-clojure-poc.user.service :as user-service]
+  (:require [api-clojure-poc.user.handler :as user-handler]
             [cheshire.core :refer :all])
   (:import (io.javalin Javalin))
   )
@@ -11,6 +11,7 @@
 
 (defn -main [& args]
   (doto (Javalin/create)
-    (.get "/users" #(build-response % (user-service/all)))
+    (.get "/users" user-handler/all-user-handler)
+    (.post "/users" user-handler/all-user-handler)
     (.start 7070))
   )
