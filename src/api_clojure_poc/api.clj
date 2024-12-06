@@ -4,14 +4,9 @@
   (:import (io.javalin Javalin))
   )
 
-(defn build-response [ctx object]
-  (.status ctx 200)
-  (.result ctx (generate-string object))
-  )
-
 (defn -main [& args]
   (doto (Javalin/create)
     (.get "/users" user-handler/all-user-handler)
-    (.post "/users" user-handler/all-user-handler)
+    (.post "/users" user-handler/add)
     (.start 7070))
   )

@@ -1,7 +1,13 @@
 (ns api-clojure-poc.user.handler
-  (:require [api-clojure-poc.api :as api]
-            [api-clojure-poc.user.service :as user-service]))
+  (:require [api-clojure-poc.user.service :as user-service]
+            [cheshire.core :refer :all]))
 
 (defn all-user-handler [ctx]
-  (api/build-response ctx (user-service/all))
+  (.status ctx 200)
+  (.result ctx (generate-string (user-service/all)))
+  )
+
+(defn add [ctx]
+  (.status ctx 200)
+  (.result ctx (generate-string (user-service/add (.body ctx))))
   )

@@ -1,19 +1,20 @@
 (ns api-clojure-poc.user.repository
   (:require [api-clojure-poc.user.model :as model]
-            [next.jdbc :as jdbc]))
+            [next.jdbc :as jdbc]
+            [next.jdbc.result-set :as rs]))
 
 (def db-spec
   {:dbtype   "postgresql"
-   :host     "ep-patient-term-a23fmx3b.eu-central-1.pg.koyeb.app"
+   :host     ""
    :port     5432
-   :dbname   "koyebdb"
+   :dbname   ""
    :user     "admin"
-   :password "UZcg2mPYnky0"})
+   :password ""})
 
 (def ds (jdbc/get-datasource db-spec))
 
 (defn all-users []
-  (jdbc/execute! ds ["select t_title title from dotoo.tasks"]))
+  (jdbc/execute! ds ["select t_title title from dotoo.tasks"] {:builder-fn rs/as-unqualified-maps}))
 
 (defn add-user [title]
   (jdbc/execute! ds ["INSERT INTO dotoo.tasks (title) VALUES (?)" title]))
