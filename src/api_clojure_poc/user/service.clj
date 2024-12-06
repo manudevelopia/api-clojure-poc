@@ -5,6 +5,6 @@
   (repository/all)
   )
 
-(defn add [title]
-  (repository/add-user title)
+(defn add [task]
+  (repository/add task)
   )
