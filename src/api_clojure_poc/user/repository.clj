@@ -4,11 +4,11 @@
 
 (def db-spec
   {:dbtype   "postgresql"
-   :host     ""
+   :host     (System/getenv "DATABASE_HOST")
    :port     5432
-   :dbname   ""
-   :user     "admin"
-   :password ""})
+   :dbname   (System/getenv "DATABASE_NAME")
+   :user     (System/getenv "DATABASE_USER")
+   :password (System/getenv "DATABASE_PASSWORD")})
 
 (def ds (jdbc/get-datasource db-spec))
 
