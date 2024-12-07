@@ -6,10 +6,11 @@
   :dependencies [[org.clojure/clojure "1.12.0"]
                  [io.javalin/javalin "6.3.0"]
                  [cheshire "5.12.0"]
-                 [org.slf4j/slf4j-simple "2.0.16"]
                  [com.github.seancorfield/next.jdbc "1.3.955"]
                  [org.postgresql/postgresql "42.7.4"]
-                 [org.webjars/swagger-ui "5.18.2"]]
+                 [org.slf4j/slf4j-simple "2.0.16"]
+                 [org.slf4j/slf4j-api "2.0.16"]
+                 [ch.qos.logback/logback-classic "1.4.11"]]
   :main ^:skip-aot api-clojure-poc.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})
