@@ -1,4 +1,4 @@
-(ns api-clojure-poc.user.repository
+(ns api-clojure-poc.task.repository
   (:require [next.jdbc :as jdbc]
             [next.jdbc.result-set :as rs]))
 

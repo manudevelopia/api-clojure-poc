@@ -1,5 +1,5 @@
 (ns api-clojure-poc.api
-  (:require [api-clojure-poc.user.handler :as user-handler]
+  (:require [api-clojure-poc.task.handler :as user-handler]
             [cheshire.core :refer :all])
   (:import (io.javalin Javalin)
            (org.slf4j LoggerFactory)))

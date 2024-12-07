@@ -1,5 +1,5 @@
-(ns api-clojure-poc.user.handler
-  (:require [api-clojure-poc.user.service :as user-service]
+(ns api-clojure-poc.task.handler
+  (:require [api-clojure-poc.task.service :as user-service]
             [cheshire.core :refer :all]))
 
 (defn build-response [ctx object]
