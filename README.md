@@ -27,6 +27,16 @@ FIXME: listing of options this app accepts.
 ### Any Other Sections
 ### That You Think
 ### Might be Useful
+https://clojure.org/guides/learn/clojure
+https://dev.to/aussieguy/how-im-learning-clojure-in-2024-1h3h
+https://www.braveclojure.com/clojure-for-the-brave-and-true/
+https://adictosaltrabajo.com/2014/08/08/clojure-introduccion/
+https://santhoshkris.medium.com/rest-apis-with-clojure-part-i-working-with-the-apis-1b045e00114c
+https://dev.to/mrmuro/querido-yo-del-futuro-hoy-intentaremos-configurar-una-aplicacion-fullstack-en-clojure-153k
+https://stackoverflow.com/questions/76429403/how-to-translate-a-simple-web-framework-in-javalin-into-clojure
+
+https://anthonybruno.dev/2023/06/11/full-stack-development-in-a-single-java-file/
+https://picocss.com/
 
 ## License
 
